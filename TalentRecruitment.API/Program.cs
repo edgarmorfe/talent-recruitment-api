@@ -9,16 +9,16 @@ using TalentRecruitment.API.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 // Retrieve your Key Vault name from appsettings.json or environment variables
-var keyVaultName = builder.Configuration["kv-myapp-prod-1"];
+//var keyVaultName = builder.Configuration["kv-myapp-prod-1"];
 
-if (!string.IsNullOrEmpty(keyVaultName))
-{
-    var vaultUri = new Uri($"https://{keyVaultName}.vault.azure.net/");
+//if (!string.IsNullOrEmpty(keyVaultName))
+//{
+//    var vaultUri = new Uri($"https://{keyVaultName}.vault.azure.net/");
 
     // DefaultAzureCredential handles authentication locally (via Azure CLI) 
     // and in Azure (via Managed Identity) automatically.
-    builder.Configuration.AddAzureKeyVault(vaultUri, new DefaultAzureCredential());
-}
+//    builder.Configuration.AddAzureKeyVault(vaultUri, new DefaultAzureCredential());
+//}
 
 // ---------- Database (Entity Framework Core + SQL Server) ----------
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
