@@ -134,6 +134,6 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
-app.MapGet("/", (IConfiguration config) => config["DefaultConnection"]);
+//app.MapGet("/", (IConfiguration config) => config["DefaultConnection"]);
 
 app.Run();
