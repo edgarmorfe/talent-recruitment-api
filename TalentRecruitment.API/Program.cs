@@ -108,6 +108,11 @@ builder.Services.AddAuthorizationBuilder()
     .AddPolicy("RecruiterOnly", policy => policy.RequireRole("Recruiter"))
     .AddPolicy("ApplicantOnly", policy => policy.RequireRole("Applicant"));
 
+builder.Services.AddHttpsRedirection(options =>
+{
+    options.HttpsPort = 443;
+});
+
 var app = builder.Build();
 
 // ---------- Apply migrations + seed data on startup (dev convenience) ----------
