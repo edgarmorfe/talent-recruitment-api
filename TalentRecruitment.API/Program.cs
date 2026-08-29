@@ -8,6 +8,8 @@ using TalentRecruitment.API.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.WebHost.UseKestrel();
+
 // Retrieve your Key Vault name from appsettings.json or environment variables
 //var keyVaultName = builder.Configuration["kv-myapp-prod-1"];
 
