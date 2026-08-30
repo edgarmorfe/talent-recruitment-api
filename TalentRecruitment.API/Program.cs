@@ -116,10 +116,10 @@ var app = builder.Build();
 using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
-    if (app.Environment.IsDevelopment())
-    {
+    //if (app.Environment.IsDevelopment())
+    //{
         DbInitializer.Seed(db);
-    }
+   // }
 }
 
 //if (app.Environment.IsDevelopment())
