@@ -143,4 +143,9 @@ app.UseAuthorization();
 app.MapControllers();
 //app.MapGet("/", (IConfiguration config) => config["DefaultConnection"]);
 
+app.MapGet("/health", () => Results.Ok(new
+{
+    status = "Healthy"
+}));
+
 app.Run();
