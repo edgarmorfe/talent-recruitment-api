@@ -72,7 +72,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("ReactFrontend", policy =>
     {
-        policy.WithOrigins(allowedOrigins)
+        policy.WithOrigins("https://ambitious-pebble-0ae538900.7.azurestaticapps.net/")
               .AllowAnyHeader()
               .AllowAnyMethod()
               .AllowCredentials();
